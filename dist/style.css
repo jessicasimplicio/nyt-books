@@ -49,3 +49,11 @@ body {
   padding: 15px;
   margin: 15px;
 }
+
+header{
+  background-color: yellow;
+}
+
+footer {
+  background-color: blue;
+}

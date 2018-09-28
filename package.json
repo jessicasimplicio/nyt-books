@@ -1,0 +1,30 @@
+{
+  "name": "nyt-books",
+  "version": "1.0.0",
+  "description": "SPA with New York Times Best-sellers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicasimplicio/nyt-books.git"
+  },
+  "keywords": [
+    "book",
+    "best-seller",
+    "NYT",
+    "New-York-Times"
+  ],
+  "author": "J Simplicio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicasimplicio/nyt-books/issues"
+  },
+  "homepage": "https://github.com/jessicasimplicio/nyt-books#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
