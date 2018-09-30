@@ -7,14 +7,15 @@ function index() {
   $("main").html(renderIndex());
 }
 
-async function books() {
-  const booksNYT = awaitgetBooks();
+function books() {
+  const booksNYT = getBooks();
   $('main').html(renderBooksList(booksNYT));
   //$('#favorites').html(renderFavorites());
 }
 
-async function book() {
-  const book = await getBook();
+function book() {
+  const book = getBook();
+  console.log(book);
   //$('main').html(renderBook(book));
   //$('#favorites').html(renderFavorites());
 }
@@ -28,16 +29,19 @@ function getBooks() {
   let result;
 
   $.ajax({
+    async: false,
     url,
     method: 'GET',
     error,
-    crossDomain: true
-  }).done(function(result) {
-    result = loadBooks(result);
+    crossDomain: true,
+    success: function(response) {
+      result = loadBooks(response);
+      console.log('retornou');
       console.log(result);
-      return result;
-
+    }
   });
+  return result;
+
 }
 
 function loadBooks(data){
@@ -56,6 +60,7 @@ function loadBooks(data){
   });
   //showBooks(listBooks);
   console.log(listBooks);
+  console.log("hi");
   return listBooks;
  
 }
@@ -75,3 +80,16 @@ function showBooks(item) {
 function error(){
   console.log("erro");
 }
+
+
+/*  $.ajax({
+    url,
+    method: 'GET',
+    error,
+    crossDomain: true
+  }).done(function(result) {
+    result = loadBooks(result);
+      console.log(result);
+      return result;
+
+  });*/
