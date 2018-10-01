@@ -18,7 +18,7 @@ function renderBooksList(books){
   );
 
   return `
-  <div class"book-area">${books.map( (book, index) =>  
+  <div class="book-area">${books.map( (book, index) =>  
     renderBooksListItem(book, index)).join("")}
   </div>
   `;
@@ -28,9 +28,12 @@ function renderBooksList(books){
 function renderBooksListItem(book, index){
 
   return `
-  <div data-id="${index}">
-  <p>${book.title}</p>
-  <p>${index}</p>
+  <div class="book-container" data-id="${index}">
+    <img src="${book.book_image}">
+    <p class="title-book">${book.title}</p>
+    <p class="author">${book.author}</p>
+    <button class="btn-favorite">Favorito</button>
+    <a class="details" href="/books/${index}">Detalhes</a>
   </div>
 
   `
