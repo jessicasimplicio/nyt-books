@@ -56,6 +56,7 @@ function getBooks() {
 
 function loadBooks(data){
   let listNames = data.results.lists;
+  console.log(data);
 
   let listBooks = [];
   let listCategory = listNames.map(list => list.books);

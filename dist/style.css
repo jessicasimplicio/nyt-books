@@ -78,9 +78,39 @@ header a{
   margin: 5px;
 }
 
-footer {
+.rank{
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+.book-page{
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-book{
+  width: 40%;
+  margin: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title{
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+
+footer div{
   background-color: #292929;
   color: white;
   font-family: 'Playfair Display', serif;
-  display: flex;
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  padding: 1px;
+}
+
+.follow span{
+  font-size: 20px;
+  padding-left: 2px;
+
 }
