@@ -1,7 +1,7 @@
 body {
   margin: 0;
+  bottom: 0;
 }
-
 
 header{
   background-image: url('./images/estante1.jpg');
@@ -14,7 +14,7 @@ header{
 }
 
 header div{
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.67);
   height: 80px;
   width: 100%;
   display: flex;
@@ -32,6 +32,28 @@ header a{
   font-size: 40px;
   padding: 0 40px 0 40px;
 }
+
+.index{
+  padding: 30px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-index{
+  display: block;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.img-index{
+  height: 400px;
+  width: 400px;
+}
+
 
 footer {
   background-color: black;

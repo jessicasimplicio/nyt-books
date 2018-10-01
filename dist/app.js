@@ -1,8 +1,11 @@
 function renderIndex(){
   return `
-  <div>
-    <h3>New York Times Best-Sellers</h3>
-    <a href="/books" class="btn-books">Veja os livros</a>
+  <div class="index">
+    <div class="text-index">
+      <h1>Lista dos best-sellers do jornal</br>The New York Times</h1>
+      <a href="/books" class="btn-books">Veja os livros</a>
+    </div>
+    <img class="img-index" src="./dist/images/book.jpg">
   </div>
   `;
 }
