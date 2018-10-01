@@ -1,6 +1,7 @@
 page('/', index);
 page('/books', books);
 page('/books/:bookId', book);
+page('/favorites', favorites);
 page();
 
 function index() {
@@ -13,12 +14,16 @@ function books() {
   //$('#favorites').html(renderFavorites());
 }
 
-function book() {
+function book() { //ONE BOOK
   const book = getBook();
-  console.log(book);
-  //$('main').html(renderBook(book));
+  $('main').html(renderBook(book));
   //$('#favorites').html(renderFavorites());
 }
+
+function favorites(){
+  
+}
+
 
 function getBooks() {
   //event.preventDefault();
@@ -37,7 +42,7 @@ function getBooks() {
     success: function(response) {
       result = loadBooks(response);
       console.log('retornou');
-      console.log(result);
+      //console.log(result);
     }
   });
   return result;
@@ -59,23 +64,13 @@ function loadBooks(data){
     });
   });
   //showBooks(listBooks);
-  console.log(listBooks);
+  //console.log(listBooks);
   console.log("hi");
   return listBooks;
  
 }
 
-function showBooks(item) {
-  console.log(item);
-  /*let showResults = document.getElementById("show-results");
-  showResults.innerHTML = 
-  `<div class="book-area">${docs.map(doc => 
-    `<div class="book">
-      <h3>${doc.books.title}</h3>
-    </div>
-    `).join("")}
-  </div>`;*/
-}
+
 
 function error(){
   console.log("erro");

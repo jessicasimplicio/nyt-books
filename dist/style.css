@@ -1,59 +1,40 @@
 body {
   margin: 0;
-  font-family: Verdana, Geneva, sans-serif;
 }
 
-.formulario {
-  width: 100vw;
-  background-color: ;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.div-campos {
-  width: 50vw;
-}
-
-.campos-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.campo-busca {
-  height: 30px;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  width: 100%;
-}
-
-.btn-busca {
-  height: 30px;
-  width: 50%;
-  color: white;
-  text-transform: uppercase;
-  background-color: red;
-  border: none;
-}
-
-.area-noticia {
-  width: 70vw;
-  margin: auto;
-}
-
-.noticia {
-  background-color: lightgrey;
-  padding: 15px;
-  margin: 15px;
-}
 
 header{
-  background-color: yellow;
+  background-image: url('./images/estante1.jpg');
+  height: 80px;
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  size: 40px;
+  list-style-type: none;
+
+}
+
+header div{
+  background-color: rgba(0,0,0,0.7);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+  padding: 0 40px 0 40px;
+  font-size: 25px;
+}
+
+.page-title{
+  font-size: 40px;
+  padding: 0 40px 0 40px;
 }
 
 footer {
-  background-color: blue;
+  background-color: black;
+  color: white;
+  font-family: 'Playfair Display', serif;
 }
