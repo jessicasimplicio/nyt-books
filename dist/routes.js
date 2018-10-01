@@ -14,19 +14,26 @@ function books() {
   //$('#favorites').html(renderFavorites());
 }
 
-function book() { //ONE BOOK
-  const book = getBook();
-  $('main').html(renderBook(book));
+function book(response) { //ONE BOOK
+  const booksNYT = getBooks();
+  const id = extractId(response);
+  $('main').html(renderBook(booksNYT, id));
   //$('#favorites').html(renderFavorites());
 }
 
-function favorites(){
-  
+function extractId(response){
+
+  let regex = new RegExp(/\d+/g);
+  let match = response.path.match(regex);
+  return match[0];
+
 }
 
+function favorites(){
+
+}
 
 function getBooks() {
-  //event.preventDefault();
 
   var url = "https://api.nytimes.com/svc/books/v3/lists/overview.json";
   url += '?' + $.param({'api-key': "2510fdcf0d7b4efea1a30c12c342351d"});
@@ -41,8 +48,6 @@ function getBooks() {
     crossDomain: true,
     success: function(response) {
       result = loadBooks(response);
-      console.log('retornou');
-      //console.log(result);
     }
   });
   return result;
@@ -50,41 +55,19 @@ function getBooks() {
 }
 
 function loadBooks(data){
-  listNames = data.results.lists;
-  //console.log(listNames);
+  let listNames = data.results.lists;
 
   let listBooks = [];
-  let listCategory = listNames.map(list => list.books); //array com lista de livros de todas categorias
+  let listCategory = listNames.map(list => list.books);
 
   listCategory.forEach(list => {
     list.forEach(item => { 
-      //console.log(item);
-
       listBooks.push(item);
     });
   });
-  //showBooks(listBooks);
-  //console.log(listBooks);
-  console.log("hi");
-  return listBooks;
- 
+  return listBooks; 
 }
-
-
 
 function error(){
   console.log("erro");
 }
-
-
-/*  $.ajax({
-    url,
-    method: 'GET',
-    error,
-    crossDomain: true
-  }).done(function(result) {
-    result = loadBooks(result);
-      console.log(result);
-      return result;
-
-  });*/

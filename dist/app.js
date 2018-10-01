@@ -11,13 +11,7 @@ function renderIndex(){
 }
 
 function renderBooksList(books){
-  console.log(books);
-
-  books.map((book, index) =>
-    console.log(book.title + index)
-  );
-
-  return `
+   return `
   <div class="book-area">${books.map( (book, index) =>  
     renderBooksListItem(book, index)).join("")}
   </div>
@@ -37,20 +31,8 @@ function renderBooksListItem(book, index){
   </div>
 
   `
-
 }
 
-function showBooks(item) {
-  console.log(item);
-  /*let showResults = document.getElementById("show-results");
-  showResults.innerHTML = 
-  `<div class="book-area">${docs.map(doc => 
-    `<div class="book">
-      <h3>${doc.books.title}</h3>
-    </div>
-    `).join("")}
-  </div>`;*/
-}
 
 function renderBook(book){
   return ``;

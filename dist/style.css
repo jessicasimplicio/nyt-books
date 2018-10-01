@@ -79,7 +79,8 @@ header a{
 }
 
 footer {
-  background-color: black;
+  background-color: #292929;
   color: white;
   font-family: 'Playfair Display', serif;
+  display: flex;
 }
