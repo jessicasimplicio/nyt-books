@@ -15,6 +15,7 @@ Uso da [API Books do THe New York Times.](https://developer.nytimes.com/books_ap
 - separação de livros por categoria;
 - filtros para categorias; 
 - melhoria do código;
+- adicionar livros favoritos
 
 #### versão 1.0.0 (released)
 - carrega os todos os livros da API
